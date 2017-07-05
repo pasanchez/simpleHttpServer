@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/pablo/cpp-dev/simpleHttpServer/Server.cpp
+Server.h
+/home/pablo/cpp-dev/simpleHttpServer/Server.h
+
+/home/pablo/cpp-dev/simpleHttpServer/Server.h
+tiff.h
+-
+boost/asio.hpp
+-
+
+/home/pablo/cpp-dev/simpleHttpServer/main.cpp
+stdio.h
+-
+Server.h
+/home/pablo/cpp-dev/simpleHttpServer/Server.h
+

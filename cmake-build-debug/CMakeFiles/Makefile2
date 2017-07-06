@@ -60,39 +60,39 @@ CMAKE_SOURCE_DIR = /home/pablo/cpp-dev/simpleHttpServer
 CMAKE_BINARY_DIR = /home/pablo/cpp-dev/simpleHttpServer/cmake-build-debug
 
 #=============================================================================
-# Target rules for target CMakeFiles/foodPlanner.dir
+# Target rules for target CMakeFiles/simpleHttpServer.dir
 
 # All Build rule for target.
-CMakeFiles/foodPlanner.dir/all:
-	$(MAKE) -f CMakeFiles/foodPlanner.dir/build.make CMakeFiles/foodPlanner.dir/depend
-	$(MAKE) -f CMakeFiles/foodPlanner.dir/build.make CMakeFiles/foodPlanner.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pablo/cpp-dev/simpleHttpServer/cmake-build-debug/CMakeFiles --progress-num=1,2,3 "Built target foodPlanner"
-.PHONY : CMakeFiles/foodPlanner.dir/all
+CMakeFiles/simpleHttpServer.dir/all:
+	$(MAKE) -f CMakeFiles/simpleHttpServer.dir/build.make CMakeFiles/simpleHttpServer.dir/depend
+	$(MAKE) -f CMakeFiles/simpleHttpServer.dir/build.make CMakeFiles/simpleHttpServer.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pablo/cpp-dev/simpleHttpServer/cmake-build-debug/CMakeFiles --progress-num=1,2,3 "Built target simpleHttpServer"
+.PHONY : CMakeFiles/simpleHttpServer.dir/all
 
 # Include target in all.
-all: CMakeFiles/foodPlanner.dir/all
+all: CMakeFiles/simpleHttpServer.dir/all
 
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/foodPlanner.dir/rule: cmake_check_build_system
+CMakeFiles/simpleHttpServer.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pablo/cpp-dev/simpleHttpServer/cmake-build-debug/CMakeFiles 3
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/foodPlanner.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/simpleHttpServer.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pablo/cpp-dev/simpleHttpServer/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/foodPlanner.dir/rule
+.PHONY : CMakeFiles/simpleHttpServer.dir/rule
 
 # Convenience name for target.
-foodPlanner: CMakeFiles/foodPlanner.dir/rule
+simpleHttpServer: CMakeFiles/simpleHttpServer.dir/rule
 
-.PHONY : foodPlanner
-
-# clean rule for target.
-CMakeFiles/foodPlanner.dir/clean:
-	$(MAKE) -f CMakeFiles/foodPlanner.dir/build.make CMakeFiles/foodPlanner.dir/clean
-.PHONY : CMakeFiles/foodPlanner.dir/clean
+.PHONY : simpleHttpServer
 
 # clean rule for target.
-clean: CMakeFiles/foodPlanner.dir/clean
+CMakeFiles/simpleHttpServer.dir/clean:
+	$(MAKE) -f CMakeFiles/simpleHttpServer.dir/build.make CMakeFiles/simpleHttpServer.dir/clean
+.PHONY : CMakeFiles/simpleHttpServer.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/simpleHttpServer.dir/clean
 
 .PHONY : clean
 

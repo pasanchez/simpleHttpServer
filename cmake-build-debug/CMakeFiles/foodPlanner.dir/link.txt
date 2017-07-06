@@ -1,1 +1,0 @@
-/usr/bin/c++   -g   CMakeFiles/foodPlanner.dir/main.cpp.o CMakeFiles/foodPlanner.dir/Server.cpp.o  -o foodPlanner /usr/lib/x86_64-linux-gnu/libboost_filesystem.so /usr/lib/x86_64-linux-gnu/libboost_system.so 

@@ -111,17 +111,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named foodPlanner
+# Target rules for targets named simpleHttpServer
 
 # Build rule for target.
-foodPlanner: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 foodPlanner
-.PHONY : foodPlanner
+simpleHttpServer: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 simpleHttpServer
+.PHONY : simpleHttpServer
 
 # fast build rule for target.
-foodPlanner/fast:
-	$(MAKE) -f CMakeFiles/foodPlanner.dir/build.make CMakeFiles/foodPlanner.dir/build
-.PHONY : foodPlanner/fast
+simpleHttpServer/fast:
+	$(MAKE) -f CMakeFiles/simpleHttpServer.dir/build.make CMakeFiles/simpleHttpServer.dir/build
+.PHONY : simpleHttpServer/fast
 
 Server.o: Server.cpp.o
 
@@ -129,7 +129,7 @@ Server.o: Server.cpp.o
 
 # target to build an object file
 Server.cpp.o:
-	$(MAKE) -f CMakeFiles/foodPlanner.dir/build.make CMakeFiles/foodPlanner.dir/Server.cpp.o
+	$(MAKE) -f CMakeFiles/simpleHttpServer.dir/build.make CMakeFiles/simpleHttpServer.dir/Server.cpp.o
 .PHONY : Server.cpp.o
 
 Server.i: Server.cpp.i
@@ -138,7 +138,7 @@ Server.i: Server.cpp.i
 
 # target to preprocess a source file
 Server.cpp.i:
-	$(MAKE) -f CMakeFiles/foodPlanner.dir/build.make CMakeFiles/foodPlanner.dir/Server.cpp.i
+	$(MAKE) -f CMakeFiles/simpleHttpServer.dir/build.make CMakeFiles/simpleHttpServer.dir/Server.cpp.i
 .PHONY : Server.cpp.i
 
 Server.s: Server.cpp.s
@@ -147,7 +147,7 @@ Server.s: Server.cpp.s
 
 # target to generate assembly for a file
 Server.cpp.s:
-	$(MAKE) -f CMakeFiles/foodPlanner.dir/build.make CMakeFiles/foodPlanner.dir/Server.cpp.s
+	$(MAKE) -f CMakeFiles/simpleHttpServer.dir/build.make CMakeFiles/simpleHttpServer.dir/Server.cpp.s
 .PHONY : Server.cpp.s
 
 main.o: main.cpp.o
@@ -156,7 +156,7 @@ main.o: main.cpp.o
 
 # target to build an object file
 main.cpp.o:
-	$(MAKE) -f CMakeFiles/foodPlanner.dir/build.make CMakeFiles/foodPlanner.dir/main.cpp.o
+	$(MAKE) -f CMakeFiles/simpleHttpServer.dir/build.make CMakeFiles/simpleHttpServer.dir/main.cpp.o
 .PHONY : main.cpp.o
 
 main.i: main.cpp.i
@@ -165,7 +165,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	$(MAKE) -f CMakeFiles/foodPlanner.dir/build.make CMakeFiles/foodPlanner.dir/main.cpp.i
+	$(MAKE) -f CMakeFiles/simpleHttpServer.dir/build.make CMakeFiles/simpleHttpServer.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -174,7 +174,7 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	$(MAKE) -f CMakeFiles/foodPlanner.dir/build.make CMakeFiles/foodPlanner.dir/main.cpp.s
+	$(MAKE) -f CMakeFiles/simpleHttpServer.dir/build.make CMakeFiles/simpleHttpServer.dir/main.cpp.s
 .PHONY : main.cpp.s
 
 # Help Target
@@ -185,7 +185,7 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... foodPlanner"
+	@echo "... simpleHttpServer"
 	@echo "... Server.o"
 	@echo "... Server.i"
 	@echo "... Server.s"

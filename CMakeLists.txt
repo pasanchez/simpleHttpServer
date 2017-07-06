@@ -1,17 +1,15 @@
 cmake_minimum_required(VERSION 3.7)
-project(foodPlanner)
+project(simpleHttpServer)
 
-set(CMAKE_CXX_STANDARD 14)
+set(CMAKE_CXX_STANDARD 11)
 
-set(SOURCE_FILES main.cpp Server.cpp Server.h)
+set(SOURCE_FILES
+        main.cpp
+        Server.cpp
+        Server.h)
 
-find_package(Boost COMPONENTS system filesystem REQUIRED)
+find_package(Boost REQUIRED COMPONENTS system)
 
-INCLUDE_DIRECTORIES( ${Boost_INCLUDE_DIR} )
+add_executable(simpleHttpServer ${SOURCE_FILES})
 
-add_executable(foodPlanner ${SOURCE_FILES})
-
-target_link_libraries(foodPlanner
-        ${Boost_FILESYSTEM_LIBRARY}
-        ${Boost_SYSTEM_LIBRARY}
-        )
+target_link_libraries(simpleHttpServer boost_system)

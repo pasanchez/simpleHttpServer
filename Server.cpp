@@ -40,23 +40,46 @@ void Server::listen() {
 }
 
 std::string Server::doAction(std::string requestUrl) {
-    if (this->handlerTable.find(requestUrl) != this->handlerTable.end()) {
-        return this->handlerTable[requestUrl](requestUrl);
+    unsigned long position = requestUrl.find("?",0);
+    std::string url = requestUrl.substr(0,position);
+    std::string params = requestUrl.substr(position+1, requestUrl.length()-position-1);
+    if (this->handlerTable.find(url) != this->handlerTable.end()) {
+        return this->handlerTable[url](splitParams(params));
     } else {
         std::string response = "HTTP/1.0 404 NOT FOUND\r\n Content-Length: 45\r\n\r\n";
         response += "<html><body>";
-        response += "<b><big>Error 404. The requested url " + requestUrl + " could not be loaded.</big></b> <br>";
+        response += "<b><big>Error 404. The requested url " + url + " could not be loaded.</big></b> <br>";
         response += "</body></html>";
         return response;
     }
 }
 
-void Server::registerAction(std::string url, std::function<std::string(std::string)> handler) {
+void Server::registerAction(std::string url, std::function<std::string(std::unordered_map<std::string,std::string>)> handler) {
     this->handlerTable[url] = handler;
 }
 
 void Server::stop() {
     this->continueLooping = false;
+}
+
+std::unordered_map<std::string, std::string> Server::splitParams(std::string params) {
+    std::unordered_map<std::string, std::string> paramTable;
+    if (params.empty()) return paramTable;
+    unsigned long position;
+    unsigned long prevPosition = 0;
+    do {
+        position = params.find("&",prevPosition);
+        std::string var;
+        if (position != std::string::npos) {
+            var = params.substr(prevPosition,position-prevPosition);
+        } else {
+            var = params.substr(prevPosition,params.length()-prevPosition);
+        }
+        unsigned long ePos = var.find("=",0);
+        paramTable[var.substr(0,ePos)] = var.substr(ePos+1,var.length()-ePos-1);
+        prevPosition = position + 1;
+    }while(position != std::string::npos);
+    return paramTable;
 }
 
 #pragma clang diagnostic pop

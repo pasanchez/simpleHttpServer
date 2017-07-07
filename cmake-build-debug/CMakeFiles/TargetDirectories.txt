@@ -1,3 +1,0 @@
-/home/pablo/cpp-dev/simpleHttpServer/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/pablo/cpp-dev/simpleHttpServer/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/pablo/cpp-dev/simpleHttpServer/cmake-build-debug/CMakeFiles/simpleHttpServer.dir

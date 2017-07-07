@@ -1,6 +1,7 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/simpleHttpServer.dir/main.cpp.o"
+  "CMakeFiles/simpleHttpServer.dir/example/main.cpp.o"
   "CMakeFiles/simpleHttpServer.dir/Server.cpp.o"
+  "CMakeFiles/simpleHttpServer.dir/example/jsoncpp.cpp.o"
   "simpleHttpServer.pdb"
   "simpleHttpServer"
 )

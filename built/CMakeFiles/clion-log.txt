@@ -4,4 +4,4 @@
 --   system
 -- Configuring done
 -- Generating done
--- Build files have been written to: /home/pablo/cpp-dev/simpleHttpServer/cmake-build-debug
+-- Build files have been written to: /home/pablo/cpp-dev/simpleHttpServer/built

@@ -4,9 +4,13 @@ project(simpleHttpServer)
 set(CMAKE_CXX_STANDARD 11)
 
 set(SOURCE_FILES
-        main.cpp
+        example/main.cpp
         Server.cpp
-        Server.h)
+        Server.h
+        example/jsoncpp.cpp
+        example/json/json.h
+        example/json/json-forwards.h
+        )
 
 find_package(Boost REQUIRED COMPONENTS system)
 

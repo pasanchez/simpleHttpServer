@@ -54,7 +54,7 @@ std::string Server::doAction(std::string requestUrl) {
     }
 }
 
-void Server::registerAction(std::string url, std::function<std::string(std::unordered_map<std::string,std::string>)> handler) {
+void Server::registerAction(std::string url,connection_handler_t handler) {
     this->handlerTable[url] = handler;
 }
 

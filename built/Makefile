@@ -51,7 +51,7 @@ EQUALS = =
 CMAKE_SOURCE_DIR = /home/pablo/cpp-dev/simpleHttpServer
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/pablo/cpp-dev/simpleHttpServer/cmake-build-debug
+CMAKE_BINARY_DIR = /home/pablo/cpp-dev/simpleHttpServer/built
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pablo/cpp-dev/simpleHttpServer/cmake-build-debug/CMakeFiles /home/pablo/cpp-dev/simpleHttpServer/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pablo/cpp-dev/simpleHttpServer/built/CMakeFiles /home/pablo/cpp-dev/simpleHttpServer/built/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pablo/cpp-dev/simpleHttpServer/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pablo/cpp-dev/simpleHttpServer/built/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -150,32 +150,59 @@ Server.cpp.s:
 	$(MAKE) -f CMakeFiles/simpleHttpServer.dir/build.make CMakeFiles/simpleHttpServer.dir/Server.cpp.s
 .PHONY : Server.cpp.s
 
-main.o: main.cpp.o
+example/jsoncpp.o: example/jsoncpp.cpp.o
 
-.PHONY : main.o
+.PHONY : example/jsoncpp.o
 
 # target to build an object file
-main.cpp.o:
-	$(MAKE) -f CMakeFiles/simpleHttpServer.dir/build.make CMakeFiles/simpleHttpServer.dir/main.cpp.o
-.PHONY : main.cpp.o
+example/jsoncpp.cpp.o:
+	$(MAKE) -f CMakeFiles/simpleHttpServer.dir/build.make CMakeFiles/simpleHttpServer.dir/example/jsoncpp.cpp.o
+.PHONY : example/jsoncpp.cpp.o
 
-main.i: main.cpp.i
+example/jsoncpp.i: example/jsoncpp.cpp.i
 
-.PHONY : main.i
+.PHONY : example/jsoncpp.i
 
 # target to preprocess a source file
-main.cpp.i:
-	$(MAKE) -f CMakeFiles/simpleHttpServer.dir/build.make CMakeFiles/simpleHttpServer.dir/main.cpp.i
-.PHONY : main.cpp.i
+example/jsoncpp.cpp.i:
+	$(MAKE) -f CMakeFiles/simpleHttpServer.dir/build.make CMakeFiles/simpleHttpServer.dir/example/jsoncpp.cpp.i
+.PHONY : example/jsoncpp.cpp.i
 
-main.s: main.cpp.s
+example/jsoncpp.s: example/jsoncpp.cpp.s
 
-.PHONY : main.s
+.PHONY : example/jsoncpp.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) -f CMakeFiles/simpleHttpServer.dir/build.make CMakeFiles/simpleHttpServer.dir/main.cpp.s
-.PHONY : main.cpp.s
+example/jsoncpp.cpp.s:
+	$(MAKE) -f CMakeFiles/simpleHttpServer.dir/build.make CMakeFiles/simpleHttpServer.dir/example/jsoncpp.cpp.s
+.PHONY : example/jsoncpp.cpp.s
+
+example/main.o: example/main.cpp.o
+
+.PHONY : example/main.o
+
+# target to build an object file
+example/main.cpp.o:
+	$(MAKE) -f CMakeFiles/simpleHttpServer.dir/build.make CMakeFiles/simpleHttpServer.dir/example/main.cpp.o
+.PHONY : example/main.cpp.o
+
+example/main.i: example/main.cpp.i
+
+.PHONY : example/main.i
+
+# target to preprocess a source file
+example/main.cpp.i:
+	$(MAKE) -f CMakeFiles/simpleHttpServer.dir/build.make CMakeFiles/simpleHttpServer.dir/example/main.cpp.i
+.PHONY : example/main.cpp.i
+
+example/main.s: example/main.cpp.s
+
+.PHONY : example/main.s
+
+# target to generate assembly for a file
+example/main.cpp.s:
+	$(MAKE) -f CMakeFiles/simpleHttpServer.dir/build.make CMakeFiles/simpleHttpServer.dir/example/main.cpp.s
+.PHONY : example/main.cpp.s
 
 # Help Target
 help:
@@ -189,9 +216,12 @@ help:
 	@echo "... Server.o"
 	@echo "... Server.i"
 	@echo "... Server.s"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
+	@echo "... example/jsoncpp.o"
+	@echo "... example/jsoncpp.i"
+	@echo "... example/jsoncpp.s"
+	@echo "... example/main.o"
+	@echo "... example/main.i"
+	@echo "... example/main.s"
 .PHONY : help
 
 

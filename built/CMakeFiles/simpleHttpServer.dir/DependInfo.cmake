@@ -4,8 +4,9 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/pablo/cpp-dev/simpleHttpServer/Server.cpp" "/home/pablo/cpp-dev/simpleHttpServer/cmake-build-debug/CMakeFiles/simpleHttpServer.dir/Server.cpp.o"
-  "/home/pablo/cpp-dev/simpleHttpServer/main.cpp" "/home/pablo/cpp-dev/simpleHttpServer/cmake-build-debug/CMakeFiles/simpleHttpServer.dir/main.cpp.o"
+  "/home/pablo/cpp-dev/simpleHttpServer/Server.cpp" "/home/pablo/cpp-dev/simpleHttpServer/built/CMakeFiles/simpleHttpServer.dir/Server.cpp.o"
+  "/home/pablo/cpp-dev/simpleHttpServer/example/jsoncpp.cpp" "/home/pablo/cpp-dev/simpleHttpServer/built/CMakeFiles/simpleHttpServer.dir/example/jsoncpp.cpp.o"
+  "/home/pablo/cpp-dev/simpleHttpServer/example/main.cpp" "/home/pablo/cpp-dev/simpleHttpServer/built/CMakeFiles/simpleHttpServer.dir/example/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

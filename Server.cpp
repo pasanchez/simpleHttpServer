@@ -1,5 +1,7 @@
 #include "Server.h"
 
+bool url_decode(const std::string& in, std::string& out);
+
 #pragma clang diagnostic push
 using namespace boost::asio::ip;
 
@@ -28,7 +30,9 @@ void Server::listen() {
             std::string get(getBuff);
 
             // send response
-            std::string response = this->doAction(get);
+            std::string decoded;
+            url_decode(get,decoded);
+            std::string response = this->doAction(decoded);
             auto buff = boost::asio::buffer(&response[0],response.size());
             boost::asio::write(*s, buff , error);
             s->close();
@@ -80,6 +84,48 @@ std::unordered_map<std::string, std::string> Server::splitParams(std::string par
         prevPosition = position + 1;
     }while(position != std::string::npos);
     return paramTable;
+}
+
+// from BOOST examples:
+//http://www.boost.org/doc/libs/1_46_0/doc/html/boost_asio/example/http/server3/request_handler.cpp
+bool url_decode(const std::string& in, std::string& out) {
+
+
+    out.clear();
+    out.reserve(in.size());
+    for (std::size_t i = 0; i < in.size(); ++i)
+    {
+        if (in[i] == '%')
+        {
+            if (i + 3 <= in.size())
+            {
+                int value = 0;
+                std::istringstream is(in.substr(i + 1, 2));
+                if (is >> std::hex >> value)
+                {
+                    out += static_cast<char>(value);
+                    i += 2;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            else
+            {
+                return false;
+            }
+        }
+        else if (in[i] == '+')
+        {
+            out += ' ';
+        }
+        else
+        {
+            out += in[i];
+        }
+    }
+    return true;
 }
 
 #pragma clang diagnostic pop

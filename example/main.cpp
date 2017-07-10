@@ -23,7 +23,7 @@ int main(int argc, char* argv[]) {
     printf("Starting server.\n");
     Server server(port);
     printf("Listening on port %d....\n",port);
-    server.registerAction("/",[](std::unordered_map<std::string,std::string> params)->std::string {
+    server.registerAction("/name",[](std::unordered_map<std::string,std::string> params)->std::string {
         std::string response;
         response = "HTTP/1.0 200 OK\r\n Content-Length: 45\r\n\r\n";
         response += "<html><body>";
